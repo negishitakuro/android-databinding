@@ -17,15 +17,10 @@
 package com.example.android.databinding.basicsample.ui
 
 import android.content.Context
-import android.content.res.ColorStateList
 import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.ProgressBar
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.core.widget.ImageViewCompat
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import com.example.android.databinding.basicsample.R
@@ -60,16 +55,16 @@ class PlainOldActivitySolution3 : AppCompatActivity() {
      * - It's updating two views when called even if they're not changing
      */
     private fun updateLikes() {
-        findViewById<TextView>(R.id.likes).text = viewModel.likes.toString()
-        findViewById<ProgressBar>(R.id.progressBar).progress =
-            (viewModel.likes * 100 / 5).coerceAtMost(100)
-        val image = findViewById<ImageView>(R.id.imageView)
-
-        val color = getAssociatedColor(viewModel.popularity, this)
-
-        ImageViewCompat.setImageTintList(image, ColorStateList.valueOf(color))
-
-        image.setImageDrawable(getDrawablePopularity(viewModel.popularity, this))
+//        findViewById<TextView>(R.id.likes).text = viewModel.likes.toString()
+//        findViewById<ProgressBar>(R.id.progressBar).progress =
+//            (viewModel.likes * 100 / 5).coerceAtMost(100)
+//        val image = findViewById<ImageView>(R.id.imageView)
+//
+//        val color = getAssociatedColor(viewModel.popularity, this)
+//
+//        ImageViewCompat.setImageTintList(image, ColorStateList.valueOf(color))
+//
+//        image.setImageDrawable(getDrawablePopularity(viewModel.popularity, this))
     }
 
     private fun getAssociatedColor(popularity: Popularity, context: Context): Int {
