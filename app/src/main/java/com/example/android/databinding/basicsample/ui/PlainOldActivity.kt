@@ -39,7 +39,7 @@ class PlainOldActivity : AppCompatActivity() {
 
     // Obtain ViewModel from ViewModelProviders
     private val viewModel by lazy { ViewModelProviders.of(this).get(SimpleViewModel::class.java) }
-
+ 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
